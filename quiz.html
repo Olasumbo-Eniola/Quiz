@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon.jpg">
+    <title>Take the Quiz</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+      body{
+        background-color: rgb(206, 198, 198);
+      }
+    </style>
+    </head>
+    <body>
+        <p id="intro">Note: You can only select a button once </p>
+            
+            <p id="QuestionQuiz" class="Qn"></p>
+           
+            
+            <button id="Answer1" class="Ans" onclick="Answer1Select()"></button> 
+            <button id="Answer2" class="Ans" onclick="Answer2Select()"></button> 
+            <button id="Answer3" class="Ans" onclick="Answer3Select()"></button>
+            <p>
+            
+            <button id="Next" class="NextQ" onclick="NextQu()">Next Question </button>
+            <button id="Finish" class="FinishQ" onclick="FinishQu()">Finish Quiz</button></p>
+            
+          
+            
+            <p id="CurrentQuScore" class="Current">
+            
+            </p>
+            
+            <p id="Rolling Score" class="RS">
+            Your total score for this quiz is X 
+            <!-- The cumulative score - total score for all questions answered so far - will go here -->
+            </p>
+            
+            </div>
+            
+            
+    </body>
+    <script src="script.js"></script>
+
+</html>
+<!--var myQuestions = [
+  {question: "What is the closest planet to the sun?",
+answers:  {a: 'Mercury',b: 'Saturn', c:'Uranus'},
+correctAnswer: 'a'},
+{question: 'Where can sun be classified?',
+answers: {a: 'Planet', b: 'Star', c: 'None of the above'},
+correctAnswer: 'b'},
+{question: 'Which galaxy is earth located?',
+answers: {a: 'Andromeda Galaxy', b: 'The Milky way Galaxy', c: 'Whirlpool Galaxy' },
+correctAnswer: 'b' },
+{question: 'Ganymede is a moon of which planet?',
+answers: {a: 'Jupiter',b: 'Pluto', c:'Venus'},
+correctAnswer: 'a'},
+{question: 'Which planet is known as the red planet?',
+answers: {a: 'Uranus', b: 'Neptune', c: 'Mars'},
+correctAnswer: 'c'}
+];-->
