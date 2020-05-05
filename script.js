@@ -1,12 +1,15 @@
 
 var i = 0;
+var b = 0;
 
 function NextQu(){
   i++;
+  document.getElementById('quiz').style.display = 'block';
   document.getElementById("QuestionQuiz").innerHTML = "Question "+(i+1)+": "+Questions[i];
   document.getElementById('Next').style.display = "none";
   document.getElementById('CurrentQuScore').style.display = 'none';
   document.getElementById('Answer1').style.display = "inline";
+  document.getElementById('Answer1').style.backgroundColor = "white"
   document.getElementById('Answer2').style.display = "inline";
   document.getElementById('Answer3').style.display ="inline";
   document.getElementById("Answer1").innerHTML=Answers[i][0];
@@ -30,6 +33,11 @@ var j;
 var ScoreTotal = [];
 
 function Answer1Select(){
+  do{
+    Soln = b + 1;
+    document.getElementById('Answer1').style.backgroundColor = 'greenyellow'
+  }while(Answers[i].values == Soln[b]);
+  
   if (i < Questions.length - 1){
   j=0;
   
@@ -112,9 +120,9 @@ var A4 = ['Andromeda Galaxy', 'Whirlpool Galaxy', 'The Milky Way Galaxy'];
 var A5 = ['James Webb telescope', 'Spitzer space telescope', 'Hubble Space telescope']
 var Answers = [A1, A2, A3, A4, A5];
 
- var SN1 = 'Jupiter';
+ var SN1 = 'Mars';
  var SN2 = 'Mercury';
- var SN3 = 'Star';
+ var SN3 = 'Planet';
  var SN4 = 'The Milky Way Galaxy';
  var SN5 = 'Jupiter';
  var Soln = [SN1, SN2, SN3, SN4, SN5];
@@ -134,4 +142,3 @@ document.getElementById("QuestionQuiz").style.display = 'block';
 document.getElementById("Answer1").innerHTML=Answers[i][0];
 document.getElementById("Answer2").innerHTML=Answers[i][1];
 document.getElementById("Answer3").innerHTML=Answers[i][2];
-

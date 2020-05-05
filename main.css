@@ -32,7 +32,7 @@ a:hover{
 img{
  
   width: 100%;
-  height: auto;
+  
 
 
 }
@@ -62,9 +62,10 @@ p.Qn{
   color: #11174A;
   display: none;
   }
-    div.Quiz1 {
-      background-color: #C8DCDD;
+    div.quiz {
+      background-color: rgb(57, 126, 131);
       text-align: center;
+      width: 50%;
     }
       button.Ans {
         display: none;
@@ -127,4 +128,14 @@ p.Qn{
     p.Current {
       font-size: 18px;
       color: #074616;
+      border: 2px solid white;
     }
+    .Quiz{
+      width: 100%;
+      background-color: rgb(72, 131, 48);
+      box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.4);
+    }
+    #RollingScore{
+      border: 2px solid white;
+    }
+    
