@@ -75,9 +75,10 @@ function Answer1Select(){
   document.getElementById('CurrentQuScore').style.display = 'block';
   document.getElementById('CurrentQuScore').innerHTML = "You have " + score[i][j] + ' points on this question';
   ScoreTotal.push(score[i][j])
-  document.getElementById("Rolling Score").innerHTML="Your total score is"+'<br>'+ScoreTotal.reduce(getSum);
+  document.getElementById("Rolling Score").innerHTML="Thanks for taking this quiz " +"Your total score is"+'<br>'+ScoreTotal.reduce(getSum);
       
   }else{
+    document.getElementById('intro').style.display = 'none';
       document.getElementById('Answer1').style.backgroundColor = 'red';
       document.getElementById('Answer3').style.backgroundColor = 'greenyellow';
     document.getElementById("Finish").style.display = "inline";
@@ -87,7 +88,7 @@ function Answer1Select(){
   document.getElementById('Answer3').disabled = true;
   ScoreTotal.push(score[i][j])
   document.getElementById('CurrentQuScore').innerHTML = "You have " + score[i][j] + ' points on this question';
-  document.getElementById("Rolling Score").innerHTML="Your total score is"+'<br>'+ScoreTotal.reduce(getSum);
+  document.getElementById("Rolling Score").innerHTML="Thanks for taking this quiz " +"Your total score is"+'<br>'+ScoreTotal.reduce(getSum);
   }
   
 }
@@ -103,8 +104,9 @@ function Answer2Select(){
     document.getElementById('CurrentQuScore').style.display = 'block';
     document.getElementById('CurrentQuScore').innerHTML = "You have " + score[i][j] + ' points on this question';
     ScoreTotal.push(score[i][j])
-    document.getElementById("Rolling Score").innerHTML="Your total score is"+'<br>'+ScoreTotal.reduce(getSum);
+    document.getElementById("Rolling Score").innerHTML="Thanks for taking this quiz " +"Thanks for taking this quiz " +"Your total score is"+'<br>'+ScoreTotal.reduce(getSum);
     }else{
+      document.getElementById('intro').style.display = 'none';
         document.getElementById('Answer2').style.backgroundColor = 'red';
       document.getElementById('Answer3').style.backgroundColor = 'greenyellow';
       document.getElementById("Finish").style.display = "inline";
@@ -114,7 +116,7 @@ function Answer2Select(){
     document.getElementById('Answer3').disabled = true;
     ScoreTotal.push(score[i][j])
     document.getElementById('CurrentQuScore').innerHTML = "You have " + score[i][j] + ' points on this question';
-    document.getElementById("Rolling Score").innerHTML="Your total score is"+'<br>'+ScoreTotal.reduce(getSum);
+    document.getElementById("Rolling Score").innerHTML="Thanks for taking this quiz " + " Your total score is"+'<br>'+ScoreTotal.reduce(getSum);
     }
 }
 function Answer3Select(){
@@ -128,9 +130,9 @@ function Answer3Select(){
     document.getElementById('CurrentQuScore').style.display = 'block';
     document.getElementById('CurrentQuScore').innerHTML = "You have " + score[i][j] + ' points on this question';
     ScoreTotal.push(score[i][j])
-    document.getElementById("Rolling Score").innerHTML="Your total score is"+'<br>'+ScoreTotal.reduce(getSum);
+    document.getElementById("Rolling Score").innerHTML="Thanks for taking this quiz " +"Your total score is"+'<br>'+ScoreTotal.reduce(getSum);
     }else{
-      
+      document.getElementById('intro').style.display = 'none';
       document.getElementById('Answer3').style.backgroundColor = 'greenyellow';
       document.getElementById("Finish").style.display = "inline";
     document.getElementById("CurrentQuScore").style.display = "block";
@@ -139,6 +141,6 @@ function Answer3Select(){
     document.getElementById('Answer3').disabled = true;
     ScoreTotal.push(score[i][j])
     document.getElementById('CurrentQuScore').innerHTML = "You have " + score[i][j] + ' points on this question';
-    document.getElementById("Rolling Score").innerHTML="Your total score is"+'<br>'+ScoreTotal.reduce(getSum);
+    document.getElementById("Rolling Score").innerHTML="Thanks for taking this quiz " +"Your total score is"+'<br>'+ScoreTotal.reduce(getSum);
     }
 }
