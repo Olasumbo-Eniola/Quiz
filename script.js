@@ -36,7 +36,7 @@ function Answer1Select(){
   do{
     Soln = b + 1;
     document.getElementById('Answer1').style.backgroundColor = 'greenyellow'
-  }while(Answers[i].values == Soln[b]);
+  }while(Answers[i].values !== Soln[b]);
   
   if (i < Questions.length - 1){
   j=0;
