@@ -3,7 +3,6 @@ var i = 0;
 
 function NextQu(){
   i++;
-  document.getElementById('quiz').style.display = 'block';
   document.getElementById("QuestionQuiz").innerHTML = "Question "+(i+1)+": "+Questions[i];
   document.getElementById('Next').style.display = "none";
   document.getElementById('CurrentQuScore').style.display = 'none';
@@ -74,7 +73,7 @@ function Answer1Select(){
   document.getElementById('Answer2').disabled = true;
   document.getElementById('Answer3').disabled = true;
   document.getElementById('CurrentQuScore').style.display = 'block';
-  document.getElementById('CurrentQuScore').innerHTML = "You have " + score[i][j] + ' points';
+  document.getElementById('CurrentQuScore').innerHTML = "You have " + score[i][j] + ' points on this question';
   ScoreTotal.push(score[i][j])
   document.getElementById("Rolling Score").innerHTML="Your total score is"+'<br>'+ScoreTotal.reduce(getSum);
       
@@ -87,7 +86,7 @@ function Answer1Select(){
   document.getElementById('Answer2').disabled = true;
   document.getElementById('Answer3').disabled = true;
   ScoreTotal.push(score[i][j])
-  document.getElementById('CurrentQuScore').innerHTML = "You have " + score[i][j] + ' points';
+  document.getElementById('CurrentQuScore').innerHTML = "You have " + score[i][j] + ' points on this question';
   document.getElementById("Rolling Score").innerHTML="Your total score is"+'<br>'+ScoreTotal.reduce(getSum);
   }
   
@@ -102,7 +101,7 @@ function Answer2Select(){
     document.getElementById('Answer2').disabled = true;
     document.getElementById('Answer3').disabled = true;
     document.getElementById('CurrentQuScore').style.display = 'block';
-    document.getElementById('CurrentQuScore').innerHTML = "You have " + score[i][j] + ' points';
+    document.getElementById('CurrentQuScore').innerHTML = "You have " + score[i][j] + ' points on this question';
     ScoreTotal.push(score[i][j])
     document.getElementById("Rolling Score").innerHTML="Your total score is"+'<br>'+ScoreTotal.reduce(getSum);
     }else{
@@ -114,7 +113,7 @@ function Answer2Select(){
           document.getElementById('Answer2').disabled = true;
     document.getElementById('Answer3').disabled = true;
     ScoreTotal.push(score[i][j])
-    document.getElementById('CurrentQuScore').innerHTML = "You have " + score[i][j] + ' points';
+    document.getElementById('CurrentQuScore').innerHTML = "You have " + score[i][j] + ' points on this question';
     document.getElementById("Rolling Score").innerHTML="Your total score is"+'<br>'+ScoreTotal.reduce(getSum);
     }
 }
@@ -127,7 +126,7 @@ function Answer3Select(){
     document.getElementById('Answer2').disabled = true;
     document.getElementById('Answer3').disabled = true;
     document.getElementById('CurrentQuScore').style.display = 'block';
-    document.getElementById('CurrentQuScore').innerHTML = "You have " + score[i][j] + ' points';
+    document.getElementById('CurrentQuScore').innerHTML = "You have " + score[i][j] + ' points on this question';
     ScoreTotal.push(score[i][j])
     document.getElementById("Rolling Score").innerHTML="Your total score is"+'<br>'+ScoreTotal.reduce(getSum);
     }else{
@@ -139,7 +138,7 @@ function Answer3Select(){
           document.getElementById('Answer2').disabled = true;
     document.getElementById('Answer3').disabled = true;
     ScoreTotal.push(score[i][j])
-    document.getElementById('CurrentQuScore').innerHTML = "You have " + score[i][j] + ' points';
+    document.getElementById('CurrentQuScore').innerHTML = "You have " + score[i][j] + ' points on this question';
     document.getElementById("Rolling Score").innerHTML="Your total score is"+'<br>'+ScoreTotal.reduce(getSum);
     }
 }
