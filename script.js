@@ -8,6 +8,7 @@ function NextQu(){
   document.getElementById("QuestionQuiz").innerHTML = "Question "+(i+1)+": "+Questions[i];
   document.getElementById('Next').style.display = "none";
   document.getElementById('CurrentQuScore').style.display = 'none';
+	document.getElementById('answered').style.display = 'block';
   ans1.style.display = "inline";
   ans1.style.backgroundColor = "white"
   ans2.style.backgroundColor = 'white';
@@ -36,7 +37,8 @@ function FinishQu() {
   }
 var j;
 var ScoreTotal = [];
-
+var k;
+var corrAns = [];
 
 var Q1 = 'Which planet is known as the red planet';
 var Q2 = 'What is the closest planet to the sun?';
@@ -63,6 +65,16 @@ var score = [SC1, SC2, SC3, SC4, SC5, SC6];
 function getSum(a, b){
   return a + b;
 }
+var answer1 = [0, 0, 1];
+var answer2 = [0, 0, 1];
+var answer3 = [0, 0, 1];
+var answer4 = [0, 0, 1];
+var answer5 = [0, 0, 1];
+var answer6 = [0, 0, 1];
+var answer = [answer1, answer2, answer3, answer4, answer5, answer6];
+function addSum(total, num){
+return total + num;
+}
 document.getElementById("QuestionQuiz").innerHTML = "Question 1:"+Questions[i];
 document.getElementById("QuestionQuiz").style.display = 'block';
 ans1.innerHTML=Answers[i][0];
@@ -71,6 +83,7 @@ ans3.innerHTML=Answers[i][2];
 function Answer1Select(){
   if (i < Questions.length - 1){
   j=0;
+	k=0;
   ans1.style.backgroundColor = 'red';
   ans3.style.backgroundColor = 'greenyellow';
       ans1.style.color = 'white';
@@ -82,6 +95,8 @@ function Answer1Select(){
   document.getElementById('CurrentQuScore').style.display = 'block';
   document.getElementById('CurrentQuScore').innerHTML = "You have " + score[i][j] + ' points on this question';
   ScoreTotal.push(score[i][j])
+	corrAns.push(answer[i][k])
+		document.getElementById('ans').innerHTML = "You have answered " + corrAns.reduce(addSum) + " out of 5 questions correctly" ;
   document.getElementById("Rolling Score").innerHTML="Thanks for taking this quiz " +"Your total score is"+'<br>'+ScoreTotal.reduce(getSum);
       
   }else{
@@ -96,6 +111,8 @@ function Answer1Select(){
   ans2.disabled = true;
   ans3.disabled = true;
   ScoreTotal.push(score[i][j])
+	corrAns.push(answer[i][k])
+		document.getElementById('ans').innerHTML = "You have answered " + corrAns.reduce(addSum) + " out of 5 questions correctly" ;
   document.getElementById('CurrentQuScore').innerHTML = "You have " + score[i][j] + ' points on this question';
   document.getElementById("Rolling Score").innerHTML="Thanks for taking this quiz " +"Your total score is"+'<br>'+ScoreTotal.reduce(getSum);
   }
@@ -104,6 +121,7 @@ function Answer1Select(){
 function Answer2Select(){
   if (i < Questions.length - 1){
     j=1;
+		k=1;
     ans2.style.color = 'white';
     ans3.style.color = 'white';
     ans2.style.backgroundColor = 'red';
@@ -115,6 +133,8 @@ function Answer2Select(){
     document.getElementById('CurrentQuScore').style.display = 'block';
     document.getElementById('CurrentQuScore').innerHTML = "You have " + score[i][j] + ' points on this question';
     ScoreTotal.push(score[i][j])
+		corrAns.push(answer[i][k])
+		document.getElementById('ans').innerHTML = "You have answered " + corrAns.reduce(addSum) + " out of 5 questions correctly" ;
     document.getElementById("Rolling Score").innerHTML="Thanks for taking this quiz " +"Thanks for taking this quiz " +"Your total score is"+'<br>'+ScoreTotal.reduce(getSum);
     }else{
       ans2.style.color = 'white';
@@ -128,6 +148,8 @@ function Answer2Select(){
           ans2.disabled = true;
     ans3.disabled = true;
     ScoreTotal.push(score[i][j])
+		corrAns.push(answer[i][k])
+		document.getElementById('ans').innerHTML = "You have answered " + corrAns.reduce(addSum) + " out of 5 questions correctly" ;
     document.getElementById('CurrentQuScore').innerHTML = "You have " + score[i][j] + ' points on this question';
     document.getElementById("Rolling Score").innerHTML="Thanks for taking this quiz " + " Your total score is"+'<br>'+ScoreTotal.reduce(getSum);
     }
@@ -135,6 +157,7 @@ function Answer2Select(){
 function Answer3Select(){
   if (i < Questions.length - 1){
     j=2;
+		k=2;
     ans3.style.color = 'white';
     ans3.style.backgroundColor = 'greenyellow';
     document.getElementById('Next').style.display = "inline";
@@ -144,6 +167,9 @@ function Answer3Select(){
     document.getElementById('CurrentQuScore').style.display = 'block';
     document.getElementById('CurrentQuScore').innerHTML = "You have " + score[i][j] + ' points on this question';
     ScoreTotal.push(score[i][j])
+		
+		corrAns.push(answer[i][k])
+		document.getElementById('ans').innerHTML = "You have answered " + corrAns.reduce(addSum) + " out of 5 questions correctly" ;
     document.getElementById("Rolling Score").innerHTML="Thanks for taking this quiz " +"Your total score is"+'<br>'+ScoreTotal.reduce(getSum);
     }else{
       ans3.style.color = 'white';
@@ -155,6 +181,8 @@ function Answer3Select(){
           ans2.disabled = true;
     ans3.disabled = true;
     ScoreTotal.push(score[i][j])
+		corrAns.push(answer[i][k])
+		document.getElementById('ans').innerHTML = "You have answered " + corrAns.reduce(addSum) + " out of 5 questions correctly" ;
     document.getElementById('CurrentQuScore').innerHTML = "You have " + score[i][j] + ' points on this question';
     document.getElementById("Rolling Score").innerHTML="Thanks for taking this quiz " +"Your total score is"+'<br>'+ScoreTotal.reduce(getSum);
     }
