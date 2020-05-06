@@ -5,9 +5,9 @@ body{
 }
 h3{
   font-weight: 900;
-  font-size: 39px;
+  font-size: 3vw;
   position: absolute;
-  top: 40%;
+  top: 37%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -23,7 +23,7 @@ a{
   transform: translate(-50%, -50%);
   padding: 8px 6px;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 3vw;
 }
 a:hover{
   background-color: white;
@@ -112,7 +112,10 @@ p.Qn{
     }
     @media screen and (max-width: 700px){
       h3{
-        font-size: 30px;
+        font-size: 5vw;
+      }
+      a{
+        font-size: 4vw;
       }
       div.quiz{
         width: 100%;
