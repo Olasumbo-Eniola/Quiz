@@ -8,7 +8,6 @@ function NextQu(){
   document.getElementById("QuestionQuiz").innerHTML = "Question "+(i+1)+": "+Questions[i];
   document.getElementById('Next').style.display = "none";
   document.getElementById('CurrentQuScore').style.display = 'none';
-	document.getElementById('answered').style.display = 'block';
   ans1.style.display = "inline";
   ans1.style.backgroundColor = "white"
   ans2.style.backgroundColor = 'white';
@@ -96,7 +95,6 @@ function Answer1Select(){
   document.getElementById('CurrentQuScore').innerHTML = "You have " + score[i][j] + ' points on this question';
   ScoreTotal.push(score[i][j])
   corrAns.push(answer[i][k])
-  document.getElementById('answered').innerHTML = answer[i][k];
 		document.getElementById('ans').innerHTML = "You have answered " + corrAns.reduce(addSum) + " out of 5 questions correctly" ;
   document.getElementById("Rolling Score").innerHTML="Thanks for taking this quiz " +"Your total score is"+'<br>'+ScoreTotal.reduce(getSum);
       
@@ -113,7 +111,7 @@ function Answer1Select(){
   ans3.disabled = true;
   ScoreTotal.push(score[i][j])
 	corrAns.push(answer[i][k])
-		document.getElementById('ans').innerHTML = "You have answered " + corrAns.reduce(addSum) + " out of 5 questions correctly" ;
+		document.getElementById('ans').innerHTML = "You answered " + corrAns.reduce(addSum) + " out of 5 questions correctly" ;
   document.getElementById('CurrentQuScore').innerHTML = "You have " + score[i][j] + ' points on this question';
   document.getElementById("Rolling Score").innerHTML="Thanks for taking this quiz " +"Your total score is"+'<br>'+ScoreTotal.reduce(getSum);
   }
@@ -150,7 +148,7 @@ function Answer2Select(){
     ans3.disabled = true;
     ScoreTotal.push(score[i][j])
 		corrAns.push(answer[i][k])
-		document.getElementById('ans').innerHTML = "You have answered " + corrAns.reduce(addSum) + " out of 5 questions correctly" ;
+		document.getElementById('ans').innerHTML = "You  answered " + corrAns.reduce(addSum) + " out of 5 questions correctly" ;
     document.getElementById('CurrentQuScore').innerHTML = "You have " + score[i][j] + ' points on this question';
     document.getElementById("Rolling Score").innerHTML="Thanks for taking this quiz " + " Your total score is"+'<br>'+ScoreTotal.reduce(getSum);
     }
@@ -183,7 +181,7 @@ function Answer3Select(){
     ans3.disabled = true;
     ScoreTotal.push(score[i][j])
 		corrAns.push(answer[i][k])
-		document.getElementById('ans').innerHTML = "You have answered " + corrAns.reduce(addSum) + " out of 5 questions correctly" ;
+		document.getElementById('ans').innerHTML = "You answered " + corrAns.reduce(addSum) + " out of 5 questions correctly" ;
     document.getElementById('CurrentQuScore').innerHTML = "You have " + score[i][j] + ' points on this question';
     document.getElementById("Rolling Score").innerHTML="Thanks for taking this quiz " +"Your total score is"+'<br>'+ScoreTotal.reduce(getSum);
     }
