@@ -95,7 +95,8 @@ function Answer1Select(){
   document.getElementById('CurrentQuScore').style.display = 'block';
   document.getElementById('CurrentQuScore').innerHTML = "You have " + score[i][j] + ' points on this question';
   ScoreTotal.push(score[i][j])
-	corrAns.push(answer[i][k])
+  corrAns.push(answer[i][k])
+  document.getElementById('answered').innerHTML = answer[i][k];
 		document.getElementById('ans').innerHTML = "You have answered " + corrAns.reduce(addSum) + " out of 5 questions correctly" ;
   document.getElementById("Rolling Score").innerHTML="Thanks for taking this quiz " +"Your total score is"+'<br>'+ScoreTotal.reduce(getSum);
       
@@ -104,7 +105,7 @@ function Answer1Select(){
     ans3.style.color = 'white';
     document.getElementById('intro').style.display = 'none';
       ans1.style.backgroundColor = 'red';
-      document.getElementById('Answer3').style.backgroundColor = 'greenyellow';
+      ans3.style.backgroundColor = 'greenyellow';
     document.getElementById("Finish").style.display = "inline";
   document.getElementById("CurrentQuScore").style.display = "block";
   ans1.disabled = true;
